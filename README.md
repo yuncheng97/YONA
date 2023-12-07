@@ -59,11 +59,10 @@ Set your own configuration before training. Make sure you set the right dataset 
 ## Citation
 - If you find this work is helpful, please cite our paper
 ```
-@article{jiang2023ecc,
-  title={ECC-PolypDet: Enhanced CenterNet With Contrastive Learning for Automatic Polyp Detection},
-  author={Jiang, Yuncheng and Zhang, Zixun and Hu, Yiwen and Li, Guanbin and Wan, Xiang and Wu, Song and Cui, Shuguang and Huang, Silin and Li, Zhen},
-  journal={IEEE Journal of Biomedical and Health Informatics},
-  year={2023},
-  publisher={IEEE}
+@article{jiang2023yona,
+  title={YONA: You Only Need One Adjacent Reference-frame for Accurate and Fast Video Polyp Detection},
+  author={Jiang, Yuncheng and Zhang, Zixun and Zhang, Ruimao and Li, Guanbin and Cui, Shuguang and Li, Zhen},
+  journal={Medical Image Computing and Computer Assisted Intervention -- MICCAI 2023},
+  year={2023}
 }
 ```
