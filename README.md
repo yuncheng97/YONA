@@ -15,7 +15,18 @@ cd YONA/
 ## File tree
 ```
 YONA                         
-
+├── README.md
+├── data.py
+├── figures
+│   └── framework.png
+├── model.py
+├── pretrained
+├── result
+├── pvtv2.py
+├── resnet.py
+├── train.py
+├── train.sh
+└── utils.py
 ```
 
 ## Download dataset
