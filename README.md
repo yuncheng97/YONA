@@ -45,6 +45,13 @@ The training and testing datasets come from public colonoscopy benchmarks: 'SUNS
 - [Numpy 1.23](https://numpy.org/)
 - [Albumentations 1.3.1](https://github.com/albumentations-team/albumentations)
 
+## Pretrained
+
+download the pretrained backbone models and put them in the pretrained folder
+- PVT: [Baidu:bhrf](https://pan.baidu.com/s/1YT-lBXbFXNVKui-8EN1Mvg?pwd=bhrf)
+- ResNet50: [Baidu:hc2h](https://pan.baidu.com/s/1BstgyMaBG6yO_8QB3I6pAw?pwd=hc2h)
+- ResNet101: [Baidu:34an](https://pan.baidu.com/s/1GjnHTHaGgv_fIj6iDUW0qw?pwd=34an)
+  
 
 ## Training
 Set your own configuration before training. Make sure you set the right dataset path in '--data_path' and save path in '--save_path'.
