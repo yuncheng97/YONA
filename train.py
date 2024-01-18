@@ -240,14 +240,16 @@ class Validation:
         model.eval()
         with torch.no_grad():
             num_tps, num_fps, num_dets, num_gts = 0, 0, 0, 0
-            start = time.time()
+            seconds = 0
             for idx in range(len(self.samples)):
                 images     = self.Image[idx].cuda()
                 gt_bbox    = self.Bbox[idx]
                 masks      = self._de_queue(idx)
                 masks      = masks.cuda()
+                start = time.time()
                 _, _, heatmap, whpred, offset   = model(images, masks)
-
+                end = time.time()
+                seconds += end - start
                 H          = self.Height[idx]
                 W          = self.Width[idx]
                 outputs    = decode_bbox(heatmap, whpred, offset, self.confidence)
@@ -274,8 +276,6 @@ class Validation:
                 num_tp, num_fp, num_det, num_gt = num_iou(bboxs, gt_bbox)
                 num_tps, num_fps, num_dets, num_gts = num_tps+num_tp, num_fps+num_fp, num_dets+num_det, num_gts+num_gt 
 
-        end = time.time()
-        seconds = end - start
         fps  = len(self.samples) / seconds
         precision = num_tps / (num_dets+1e-6)
         recall    = num_tps / num_gts
